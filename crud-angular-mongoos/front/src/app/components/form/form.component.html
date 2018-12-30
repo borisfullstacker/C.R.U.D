@@ -1,0 +1,33 @@
+
+<h1 style="text-align: center">This is my form</h1>
+<div class="form">
+<form [formGroup]="storeForm">
+  <mat-form-field>
+    <input formControlName='price' matInput placeholder="price">
+  </mat-form-field>
+  <mat-form-field>
+    <input formControlName='title' matInput placeholder="title">
+  </mat-form-field>
+  <mat-form-field>
+    <input formControlName='pic' matInput placeholder="pic">
+  </mat-form-field>
+</form>
+  <mat-form-field>
+    <input [(ngModel)]='id' matInput placeholder="id">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select" (selectionChange)="priceSearch($event.value)">
+      <mat-option value="1">0-200</mat-option>
+      <mat-option value="2">200+</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+ <div class="btn-ctn">
+  <button mat-stroked-button color="primary" type="button" (click)="post()">Add</button>
+  <button mat-stroked-button color="primary" type="button" (click)="deleteById()">delete by id</button>
+  <button mat-stroked-button color="primary" type="button" (click)="getById()">get by id</button>
+  <button mat-stroked-button color="primary" type="button" (click)="updateById()">up date by id</button>
+</div>
+</div>
+

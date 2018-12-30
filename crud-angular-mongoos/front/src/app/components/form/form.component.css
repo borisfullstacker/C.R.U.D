@@ -1,0 +1,17 @@
+.form {
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+input{
+   display: block;
+}
+
+.btn-ctn{
+    width: fit-content;
+}
+
+mat-form-field{
+    display: block;
+}

@@ -1,0 +1,15 @@
+
+<h1 style="margin-bottom: 40px; text-align: center;">Store Products</h1>
+<div class="container">
+    <div class="row">
+       <div class="col-md-4 " *ngFor="let x of inventory">
+          <div class="card"  style="width: 18rem; margin-bottom:10px; height: calc(100% - 10px)">
+              <img class="card-img-top" [src]="x.pic" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{x.title}}</h5>
+                <p class="card-text">{{x.price || currency}}</p>
+              </div>
+            </div>
+       </div>
+    </div>  
+</div>
